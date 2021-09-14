@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="autodetail1.css">
+
+</head>
+<body>
+   
+<div class="box-container">
+
+    <div class="box">
+
+        <div class="image-container">
+
+            <div class="big-image">
+                <img src="image/novel3.jpg" alt="">
+            </div>
+            
+        </div>
+
+        <div class="content">
+
+            <h3 class="title">The Three Body Problem</h3>
+            <div class="price">₹359/-</div>
+            <p>An alien craft has crashed in the Antarctic.
+				A creature has crawled from the wreckage and become frozen in ice.
+				The men of Fafnir Station have transported it back to their base.
+				Some of the men can hear it whispering in their mind.
+				Some are afraid and want to destroy it...
+				...and some will kill to defend it.<br><br>
+
+				In this nerve shredding sci-fi thriller, Lee McGeorge has fused the visceral horror of John Carpenter’s seminal movie with the psychological elements of Campbell’s, Who Goes There?<br><br>
+
+				“Creepy, horrifying and laced with heart-pounding action, this is ‘The Thing’ that fans have waited for.”<br><br>
+		      		</p>
+
+            <form action="">
+
+                <div class="quantity">
+                    <span> quantity : </span>
+                    <input type="number" value="1">
+                </div>
+
+            </form>
+
+            <a href="#"><button class="btn"> <i class="fas fa-shopping-cart"></i> add to cart </button></a>
+            <span class="stock"> <i class="fas fa-check"></i> in stock </span>
+            <div class="share">
+                <a href="#">facebook</a>
+                <a href="#">twitter</a>
+                <a href="#">instagram</a>
+                <a href="#">pinterest</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>    
+
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+
+    $('.small-image img').click(function(){
+
+        $(this).addClass('active').siblings().removeClass('active');
+
+        let image = $(this).attr('src');
+        $('.big-image img').attr('src',image);
+
+    });
+
+});
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
