@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Book Gallery</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500&display=swap" rel="stylesheet">
+
+    <!-- Magnific Popup CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .title{
+        font-family: serif;
+        font-weight: 600;
+        font-size: 60px;
+        position: relative;
+        margin: 40px 0;        
+    }
+    .title:before{
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 3px;
+        background: crimson;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: animate 4s linear infinite;
+    }
+    @keyframes animate{
+        0%{
+            width: 100px;
+        }
+        50%{
+            width: 300px;
+        }
+        100%{
+            width: 100px;
+        }
+    }
+    @media (max-width: 400px){
+        .title{
+            font-size: 45px;
+        }
+    }
+    .gallery {
+        padding: 25px;
+    }
+
+    .gallery ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+    }
+
+    .gallery ul li {
+        list-style: none;
+        font-size: 28px;
+        font-family: cursive;
+        background-color: rgb(215, 215, 215);
+        margin: 5px;
+        padding: 12px 25px;
+        cursor: pointer;
+        letter-spacing: 2px;
+        transition: 0.4s linear;
+    }
+    @media (max-width: 450px){
+        .gallery ul li{
+            font-size: 20px;
+            padding: 8px 20px;
+        }
+    }
+    .gallery ul li.active {
+        background-color: darkorange;
+        color: white;
+    }
+    
+    .items-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .items {
+        position: relative;
+        width: 300px;
+        height: 450px;
+        margin: 5px;
+    }
+
+    .items img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+.footer{
+    font-family: serif;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+}
+.fa-heart-o{
+    color: darkred;
+}
+.social-link .fa{
+    font-size: 30px;
+     color: darkred;
+    margin: 0 13px;
+    cursor: pointer
+}
+</style>
+
+<body>
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><h1>The BookTown</h1></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contactus.html">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="practice.html">Collection</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="index.html">Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <center><div class="title">Books Collection</div></center>  
+    <div class="gallery">
+        <ul>
+            <li class="list active" data-filter="all">All</li>
+            <li class="list" data-filter="novel">Novel</li>
+            <li class="list" data-filter="horror">Horror</li>
+            <li class="list" data-filter="romance">Romance</li>
+            <li class="list" data-filter="poetry">Poetry</li>
+            <li class="list" data-filter="auto">Autobiography</li>
+        </ul>
+
+        <div class="items-container">
+
+            <div class="items novel">
+                <a href="noveldetail10.html">
+                    <img src="image/novel10.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="items horror">
+                <a href="horrordetail1.html">
+                    <img src="image/horror1.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="items romance">
+                <a href="romancedetail1.html">
+                    <img src="image/romance1.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="items poetry">
+                <a href="poetrydetail1.html">
+                    <img src="image/poetry1.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="items auto">
+                <a href="autodetail1.html">
+                    <img src="image/auto1.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="items novel">
+                <a href="noveldetail2.html">
+                    <img src="image/novel2.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="items horror">
+                <a href="horrordetail2.html">
+                    <img src="image/horror2.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="items romance">
+                <a href="romancedetail11.html">
+                    <img src="image/romance11.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="items poetry">
+                <a href="poetrydetail10.html">
+                    <img src="image/poetry10.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="items auto">
+                <a href="autodetail2.html">
+                    <img src="image/auto2.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="items novel">
+                <a href="noveldetail3.html">
+                    <img src="image/novel3.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="items horror">
+                <a href="horrordetail3.html">
+                    <img src="image/horror3.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="items romance">
+                <a href="romancedetail12.html">
+                    <img src="image/romance12.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="items poetry">
+                <a href="poetrydetail12.html">
+                    <img src="image/poetry12.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="items auto">
+                <a href="autodetail3.html">
+                    <img src="image/auto3.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="items novel">
+                <a href="noveldetail4.html">
+                    <img src="image/novel4.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="items horror">
+                <a href="horrordetail4.html">
+                    <img src="image/horror4.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="items romance">
+                <a href="romancedetail5.html">
+                    <img src="image/romance5.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="items poetry">
+                <a href="poetrydetail2.html">
+                    <img src="image/poetry2.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="items auto">
+                <a href="autodetail4.html">
+                    <img src="image/auto4.jpg" alt="">
+                </a>
+            </div>
+
+        </div>
+    </div>
+     <section class="footer">
+        <h3>Follow Us</h3>
+        <div class="social-link">
+						<a href="#"><i class="fa fa-facebook"></i></a>
+						<a href="#"><i class="fa fa-instagram"></i></a>
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-linkedin"></i></a>
+        </div>
+        <p>Made with <i class="fa fa-heart-o"></i></p>
+    </section>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- JQuery JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Magnific Popup JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            $(".list").click(function () {
+
+                let value = $(this).attr("data-filter");
+
+                if (value == "all") {
+                    $(".items").show(500);
+                }
+                else {
+                    $(".items").not("." + value).hide(500);
+                    $(".items").filter("." + value).show(500);
+                }
+
+                $(".list").removeClass("active");
+                $(this).addClass("active");
+            });
+        });
+
+    </script>
+</body>
+
+</html>
